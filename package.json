@@ -1,0 +1,23 @@
+{
+  "name": "kalshi-quant-dashboard",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev": "bun run --filter @kalshi-quant-dashboard/web dev",
+    "build": "bun run --filter @kalshi-quant-dashboard/web build",
+    "start": "bun run --filter @kalshi-quant-dashboard/web start",
+    "lint": "bunx biome check .",
+    "format": "bunx biome format --write .",
+    "test": "bunx vitest run --config vitest.config.ts",
+    "test:watch": "bunx vitest --config vitest.config.ts",
+    "test:e2e": "bunx playwright test --config apps/web/playwright.config.ts"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@playwright/test": "^1.52.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.0.5"
+  }
+}
