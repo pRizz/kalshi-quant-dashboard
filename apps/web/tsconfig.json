@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "types": ["vite/client"],
+    "paths": {
+      "~/*": ["./src/*"],
+      "@kalshi-quant-dashboard/shared-types": ["../../packages/shared-types/src/index.ts"],
+      "@kalshi-quant-dashboard/analytics-core": ["../../packages/analytics-core/src/index.ts"],
+      "@kalshi-quant-dashboard/kalshi-client": ["../../packages/kalshi-client/src/index.ts"]
+    }
+  },
+  "include": ["src", "playwright.config.ts", "drizzle.config.ts"]
+}
